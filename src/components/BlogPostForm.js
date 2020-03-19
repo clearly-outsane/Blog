@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import React, { useState } from "react";
+import { View, Text, StyleSheet, TextInput, Button } from "react-native";
 
 const BlogPostForm = ({ onSubmit, initialValues }) => {
   const [title, setTitle] = useState(initialValues.title);
@@ -13,7 +13,7 @@ const BlogPostForm = ({ onSubmit, initialValues }) => {
         value={title}
         onChangeText={text => setTitle(text)}
       />
-      <Text style={styles.label}>Enter Content:</Text>
+      <Text style={styles.label}>Type away!</Text>
       <TextInput
         style={styles.input}
         value={content}
@@ -26,16 +26,15 @@ const BlogPostForm = ({ onSubmit, initialValues }) => {
 
 BlogPostForm.defaultProps = {
   initialValues: {
-    title: '',
-    content: ''
+    title: "",
+    content: ""
   }
 };
 
 const styles = StyleSheet.create({
   input: {
     fontSize: 18,
-    borderWidth: 1,
-    borderColor: 'black',
+    backgroundColor: "#E0E0E0",
     marginBottom: 15,
     padding: 5,
     margin: 5
